@@ -311,16 +311,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const navLinks = [...document.querySelectorAll('.mobile-nav a')];
+  const intro = document.querySelector('.introduction');
+  const navs = [...document.querySelectorAll('.mobile-nav, .header-nav')].map(nav => [...nav.querySelectorAll('a')]);
   const observer = new IntersectionObserver(entries => {
     const visible = entries.filter(entry => entry.isIntersecting).sort((a,b) => b.intersectionRatio - a.intersectionRatio);
     if (!visible.length) return;
-    navLinks.forEach(link => {
-      if (link.hash === '#' + visible[0].target.id) link.setAttribute('aria-current', 'location');
-      else link.removeAttribute('aria-current');
-    });
+    const atTop = visible[0].target === intro;
+    const hash = '#' + visible[0].target.id;
+    for (const links of navs) {
+      // A bar without a link for this section keeps its previous mark.
+      if (!atTop && !links.some(link => link.hash === hash)) continue;
+      links.forEach(link => {
+        if (link.hash === hash) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    }
   }, {rootMargin: '-12% 0px -60% 0px', threshold: [0, .1, .4]});
-  navLinks.forEach(link => observer.observe(document.querySelector(link.hash)));
+  new Set(navs.flat().map(link => link.hash)).forEach(hash => observer.observe(document.querySelector(hash)));
+  observer.observe(intro);
   document.querySelectorAll('a[href="#briefing"]').forEach(link => link.addEventListener('click', () => {
     document.getElementById('captain-notes').open = true;
   }));

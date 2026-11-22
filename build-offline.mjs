@@ -33,6 +33,7 @@ const licenseFiles = ['Leaflet-LICENSE', 'Cormorant-Garamond-OFL', 'Inter-OFL'];
 const licenseComment = licenseFiles.map(name => read(`vendor/${name}`)).join('\n\n');
 const html = read('index.html')
   .replace('<html lang="ru">', '<html lang="ru" data-offline>')
+  .replace(/^\s*<link rel="(?:preload|apple-touch-icon)"[^>]*>\n/gm, '')
   .replace(/<link rel="stylesheet" href="\.\/(.*?)">/g, (_, path) => {
     const css = embedAssets(read(path)).replace(/url\(images\/[^)]+\)/g, 'none');
     return `<style>\n${css}\n</style>`;
