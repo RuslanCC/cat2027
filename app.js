@@ -737,6 +737,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fitOverview();
     updatePinSelection();
   });
+  if (matchMedia('(min-width: 700px)').matches) document.querySelector('.stop-disclosure').open = true;
   renderGroups();
   renderZoneGuide();
   renderRoute(false);

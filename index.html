@@ -7,7 +7,19 @@
   <meta name="description" content="Сейшелы на катамаране 16–23 января 2027. Для нашей поездки: встреча, фотографии островов, маршрут по ветру, жизнь на борту и список вещей.">
   <meta name="theme-color" content="#f5f8f7">
   <title>Сейшелы · 16–23 января 2027</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Сейшелы на катамаране · 16–23 января 2027">
+  <meta property="og:description" content="Встреча на Маэ, маршрут по ветру, фотографии островов, наша лодка и список вещей — всё для нашей недели.">
+  <meta property="og:image" content="https://ruslancc.github.io/cat2027/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Островки Иль-Кокос посреди бирюзовой воды">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="./assets/compass.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="preload" href="./assets/cormorant-cyr.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/inter-cyr.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./vendor/leaflet.css">
   <link rel="stylesheet" href="./styles.css">
   <script defer src="./vendor/leaflet.js"></script>
@@ -42,6 +54,7 @@
   <header class="site-header">
     <div class="shell masthead">
       <a class="brand" href="#top"><svg class="icon" aria-hidden="true"><use href="#i-compass"/></svg>Сейшелы</a>
+      <nav class="header-nav" aria-label="Разделы путеводителя"><a href="#meeting">Встреча</a><a href="#route">Маршрут</a><a href="#islands">Острова</a><a href="#boat">Лодка</a><a href="#food">Еда</a><a href="#packing">С собой</a><a href="#first-time">Вопросы</a></nav>
       <span class="header-date">16–23 января ’27</span>
       <button class="share-button" id="open-share" type="button" hidden aria-label="Поделиться путеводителем"><svg class="icon" aria-hidden="true"><use href="#i-share"/></svg><span>Поделиться</span></button>
     </div>
@@ -49,15 +62,15 @@
 
   <main id="top">
     <section class="shell introduction">
-      <p class="eyebrow">Для нашей поездки</p>
       <h1>Неделя на <br>катамаране</h1>
+      <figure class="hero-photo"><img src="./assets/photos/cocos-4.webp" alt="Скалы и светлая вода вокруг островков Иль-Кокос" width="1200" height="800" fetchpriority="high" decoding="async"><figcaption>Островки Иль-Кокос у Ла-Дига. Фото: <a href="https://commons.wikimedia.org/wiki/File:Cocos_Inseln_Seychellen_(38909189464).jpg" target="_blank" rel="noreferrer">dronepicr</a>, CC BY 2.0</figcaption></figure>
       <p class="intro-copy">Друзья, я собрал здесь всё для нашей недели на Сейшелах — маршрут, фотографии и ответы на вопросы перед вылетом. Будем купаться, гулять по островам и собираться за одним столом на лодке.</p>
       <div class="trip-facts"><span><strong>16–23 января</strong>2027 год</span><span><strong>7 ночей</strong>на борту</span><span><strong>Маэ</strong>старт и финиш</span></div>
       <a class="text-link" href="#boat">Посмотреть наш катамаран</a>
     </section>
 
     <section class="shell section meeting-section" id="meeting" aria-labelledby="meeting-title">
-      <div class="section-heading"><p class="eyebrow">Начинаем на Маэ</p><h2 id="meeting-title">Встречаемся на Маэ</h2></div>
+      <div class="section-heading"><h2 id="meeting-title">Встречаемся на Маэ</h2></div>
       <div class="meeting-card">
         <div class="meeting-primary"><span class="calendar-tile"><strong>16</strong>января · сб</span><div><h3>15:00 · Eden Island Marina</h3><p>У офиса Sunsail, Eden Plaza, suite F14.<br>Виктория, остров Маэ.</p></div></div>
         <div class="meeting-actions"><a class="button button-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Sunsail+Eden+Island+Marina+Seychelles" target="_blank" rel="noreferrer">Открыть место в картах</a></div>
@@ -73,7 +86,7 @@
     </section>
 
     <section class="shell section" id="route" aria-labelledby="route-title">
-      <div class="section-heading"><p class="eyebrow">Как пройдёт неделя</p><h2 id="route-title">Маршрут по ветру</h2><p>Ищем бухты, где остров прикрывает нас от ветра и волны. Поэтому порядок островов и места ночёвок могут меняться.</p></div>
+      <div class="section-heading"><h2 id="route-title">Маршрут по ветру</h2><p>Ищем бухты, где остров прикрывает нас от ветра и волны. Поэтому порядок островов и места ночёвок могут меняться.</p></div>
       <div class="weather-explainer"><svg class="icon" aria-hidden="true"><use href="#i-wind"/></svg><p>В январе чаще дует с северо-запада. Я подготовил два варианта пути, чтобы можно было подстроиться под погоду. Перед выходом посмотрим прогноз и волну, затем решим, к какому берегу идти.</p><a class="source-link" href="https://www.meteo.sc/services/climate/seychelles-climate-guide/" target="_blank" rel="noreferrer">Климат Сейшел</a></div>
       <div class="wind-panel">
         <fieldset class="wind-select" aria-describedby="wind-hint">
@@ -125,24 +138,24 @@
       <details class="accordion places-disclosure" id="extra-places"><summary>Быстро найти место на карте</summary><div class="place-groups accordion-body" id="place-groups"></div></details>
     </section>
 
-    <section class="shell section" id="islands" aria-labelledby="islands-title"><div class="section-heading"><p class="eyebrow">На берегу и в воде</p><h2 id="islands-title">Наши остановки</h2><p>Я собрал места, куда хочется заглянуть за эту неделю. Фотографии листаются вбок, а порядок остановок меняется вместе с выбранным ветром.</p></div><div class="destination-grid" id="main-destinations"></div><details class="accordion more-islands" id="more-islands"><summary><span>Ещё пляжи и острова</span><span id="more-place-count"></span></summary><div class="destination-grid" id="more-destinations"></div></details></section>
+    <section class="shell section" id="islands" aria-labelledby="islands-title"><div class="section-heading"><h2 id="islands-title">Наши остановки</h2><p>Я собрал места, куда хочется заглянуть за эту неделю. Фотографии листаются вбок, а порядок остановок меняется вместе с выбранным ветром.</p></div><div class="destination-grid" id="main-destinations"></div><details class="accordion more-islands" id="more-islands"><summary><span>Ещё пляжи и острова</span><span id="more-place-count"></span></summary><div class="destination-grid" id="more-destinations"></div></details></section>
 
-    <section class="boat-section" id="boat" aria-labelledby="boat-title"><div class="shell section"><div class="section-heading"><p class="eyebrow">Наш дом на неделю</p><h2 id="boat-title">Sunsail 424 Classic</h2><p>Leopard 42 · 2022 год · около 12,8 м</p></div><div id="boat-gallery" class="boat-gallery"></div><div class="boat-facts"><span><strong>4</strong>двухместные каюты</span><span><strong>4</strong>санузла с душем</span><span><strong>8 + 2</strong>места по карточке</span></div><p class="boat-description">Внизу — каюты, посередине — общая кухня-гостиная. За столом под крышей будем завтракать и ужинать, а наверху есть ещё одна площадка с диванами. Каюты распределим до поездки, чтобы по приезде сразу заселиться.</p><details class="accordion"><summary>Что уже есть на борту</summary><div class="accordion-body"><p>На лодке есть холодильник, кондиционер, генератор, солнечные панели, опреснитель и электрические туалеты. На приёмке вместе разберёмся, как всё работает и как пользоваться водой и электричеством.</p><p>В стандарт включены постельное бельё, полотенца, ласты и тузик с мотором — небольшая надувная лодка для высадки на берег. Маску и трубку берём свои.</p><a class="source-link" href="https://portal.booking-manager.com/wbm2/page.html?view=YachtDetails&amp;addMargins=true&amp;templateType=responsive&amp;companyid=3577&amp;yachtId=3772239300000102889" target="_blank" rel="noreferrer">Карточка и фотографии катамарана</a><p class="small-note">Здесь фотографии модели из карточки бронирования. Приёмка конкретной лодки будет на базе.</p></div></details></div></section>
+    <section class="boat-section" id="boat" aria-labelledby="boat-title"><div class="shell section"><div class="section-heading"><h2 id="boat-title">Sunsail 424 Classic</h2><p>Наш дом на неделю · Leopard 42 · 2022 год · около 12,8 м</p></div><div id="boat-gallery" class="boat-gallery"></div><div class="boat-facts"><span><strong>4</strong>двухместные каюты</span><span><strong>4</strong>санузла с душем</span><span><strong>8 + 2</strong>места по карточке</span></div><p class="boat-description">Внизу — каюты, посередине — общая кухня-гостиная. За столом под крышей будем завтракать и ужинать, а наверху есть ещё одна площадка с диванами. Каюты распределим до поездки, чтобы по приезде сразу заселиться.</p><details class="accordion"><summary>Что уже есть на борту</summary><div class="accordion-body"><p>На лодке есть холодильник, кондиционер, генератор, солнечные панели, опреснитель и электрические туалеты. На приёмке вместе разберёмся, как всё работает и как пользоваться водой и электричеством.</p><p>В стандарт включены постельное бельё, полотенца, ласты и тузик с мотором — небольшая надувная лодка для высадки на берег. Маску и трубку берём свои.</p><a class="source-link" href="https://portal.booking-manager.com/wbm2/page.html?view=YachtDetails&amp;addMargins=true&amp;templateType=responsive&amp;companyid=3577&amp;yachtId=3772239300000102889" target="_blank" rel="noreferrer">Карточка и фотографии катамарана</a><p class="small-note">Здесь фотографии модели из карточки бронирования. Приёмка конкретной лодки будет на базе.</p></div></details></div></section>
 
-    <section class="shell section" id="food" aria-labelledby="food-title"><div class="section-heading"><p class="eyebrow">Еда и закупка</p><h2 id="food-title">Что покупаем до выхода</h2><p>Сначала закупимся на Маэ — так на первые дни всё будет под рукой. На островах докупим свежее и будем выбираться в рестораны. Любимые продукты и пожелания по еде лучше обсудить до поездки.</p></div>
+    <section class="shell section" id="food" aria-labelledby="food-title"><div class="section-heading"><h2 id="food-title">Что покупаем до выхода</h2><p>Сначала закупимся на Маэ — так на первые дни всё будет под рукой. На островах докупим свежее и будем выбираться в рестораны. Любимые продукты и пожелания по еде лучше обсудить до поездки.</p></div>
       <div class="provision-stops"><article><h3>SPAR · Eden Plaza</h3><p>Самый удобный вариант для первой закупки — магазин рядом с лодкой. Возьмём воду, продукты и напитки на первые дни. У базы есть булочная, кафе, банкоматы и аптека.</p><a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=SPAR+Eden+Plaza+Seychelles" target="_blank" rel="noreferrer">Найти SPAR</a></article><article><h3>Ла-Пасс · Ла-Диг</h3><p>Выйдем на берег за свежими продуктами, пообедаем и возьмём велосипеды. Магазины и рестораны есть у порта и вдоль дороги к югу.</p></article><article><h3>Анс-Вольбер · Праслен</h3><p>Здесь можно устроить общий ужин на берегу, напротив маленького острова Шов-Сури. Выберем место по настроению и по тому, где получится удобно высадиться.</p></article></div>
       <details class="accordion" open><summary>Список общей закупки</summary><div class="accordion-body shopping-list"><p><strong>Питьё</strong>Питьевая вода на первые дни, чай, кофе, молоко и напитки по вкусам команды.</p><p><strong>Завтраки</strong>Яйца, йогурт, хлеб, сыр, фрукты. Количество согласуем по числу людей.</p><p><strong>Простая еда</strong>Паста или рис, соусы, овощи и то, что команда готова готовить по очереди.</p><p><strong>На переход</strong>Фрукты, орехи, крекеры и продукты для сэндвичей — чтобы поесть без готовки.</p><p><strong>Для быта</strong>Средство для посуды, губки, бумажные полотенца, пакеты для мусора и застёжки для открытых упаковок.</p></div></details>
       <p class="source-line">Что есть рядом с причалами, можно посмотреть на <a href="https://edenislandmarina.com/amenities/" target="_blank" rel="noreferrer">сайте Eden Island Marina</a>. Часы магазинов проверим перед закупкой.</p>
     </section>
 
-    <section class="packing-section" id="packing" aria-labelledby="packing-title"><div class="shell section"><div class="section-heading"><p class="eyebrow">Собираем сумку</p><h2 id="packing-title">Что взять с собой</h2><p>Лучше взять мягкую сумку — её легко убрать в каюте. Большую часть времени проведём в лёгкой одежде, а для прогулок по островам пригодится удобная обувь. Ниже можно отмечать уже собранные вещи.</p></div><div class="packing-progress"><strong id="packing-count" role="status"></strong><button id="packing-reset" class="quiet-button" type="button">Снять отметки</button></div><div class="packing-groups" id="packing-groups"></div><p class="small-note">Отметки сохраняются в этом браузере. Полотенца и бельё есть в стандартном комплекте. Собственная маска и трубка пригодятся каждый день.</p><a class="source-link" href="https://www.sunsail.com/blog/sailing-vacation-packing-list" target="_blank" rel="noreferrer">Список вещей Sunsail</a></div></section>
+    <section class="packing-section" id="packing" aria-labelledby="packing-title"><div class="shell section"><div class="section-heading"><h2 id="packing-title">Что взять с собой</h2><p>Лучше взять мягкую сумку — её легко убрать в каюте. Большую часть времени проведём в лёгкой одежде, а для прогулок по островам пригодится удобная обувь. Ниже можно отмечать уже собранные вещи.</p></div><div class="packing-progress"><strong id="packing-count" role="status"></strong><button id="packing-reset" class="quiet-button" type="button">Снять отметки</button></div><div class="packing-groups" id="packing-groups"></div><p class="small-note">Отметки сохраняются в этом браузере. Полотенца и бельё есть в стандартном комплекте. Собственная маска и трубка пригодятся каждый день.</p><a class="source-link" href="https://www.sunsail.com/blog/sailing-vacation-packing-list" target="_blank" rel="noreferrer">Список вещей Sunsail</a></div></section>
 
-    <section class="shell section" id="first-time" aria-labelledby="first-title"><div class="section-heading"><p class="eyebrow">Если первый раз на борту</p><h2 id="first-title">Первый раз? Давайте разберёмся</h2></div><div id="faq-list"></div><div class="first-brief"><h3>В первый вечер всё покажем</h3><p>Где лежат жилеты, за что держаться на ходу, как пользоваться душем и туалетом и как садиться в тузик. Спрашивайте о чём угодно — на новой лодке у всех сначала возникают вопросы.</p></div></section>
+    <section class="shell section" id="first-time" aria-labelledby="first-title"><div class="section-heading"><h2 id="first-title">Первый раз? Давайте разберёмся</h2></div><div id="faq-list"></div><div class="first-brief"><h3>В первый вечер всё покажем</h3><p>Где лежат жилеты, за что держаться на ходу, как пользоваться душем и туалетом и как садиться в тузик. Спрашивайте о чём угодно — на новой лодке у всех сначала возникают вопросы.</p></div></section>
   </main>
 
   <footer class="site-footer shell"><p>Собрал для нашей поездки · 16–23 января 2027</p><p class="small-note">Информация о базе и катамаране проверена 22 ноября 2026.</p><details class="accordion"><summary>Фотографии и источники</summary><div class="accordion-body" id="photo-credits"></div></details><a class="source-link" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">Карта © OpenStreetMap contributors</a></footer>
 
-  <nav class="mobile-nav" aria-label="Разделы путеводителя"><a href="#meeting">Встреча</a><a href="#route">Маршрут</a><a href="#islands">Острова</a><a href="#boat">Лодка</a><a href="#packing">С собой</a></nav>
+  <nav class="mobile-nav" aria-label="Быстрый переход по разделам"><a href="#meeting">Встреча</a><a href="#route">Маршрут</a><a href="#islands">Острова</a><a href="#boat">Лодка</a><a href="#packing">С собой</a></nav>
 
   <dialog class="share-dialog" id="share-dialog" aria-labelledby="share-title"><form method="dialog"><button class="close-button" type="submit" aria-label="Закрыть"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></form><h2 id="share-title">Отправить команде</h2><p>В ссылке сохранится выбранный ветер и вариант с Фрегатом. HTML-файл можно открыть в браузере без интернета.</p><label class="sr-only" for="share-url">Ссылка</label><input id="share-url" type="url" readonly><div class="share-actions"><button class="button button-dark" id="copy-link" type="button">Скопировать ссылку</button><a class="button" href="./seychelles-route.html" download="Сейшелы — команда 2027.html">Скачать HTML</a></div><p class="share-status" id="share-status" role="status"></p></dialog>
 
